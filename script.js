@@ -1,20 +1,13 @@
 
 (function () {
-/** REVIEW: Можно лучше:
- * 
- * Перменные cardTemplate, popupAdd, popupEdit, newCardForm и popupImg объявлены, но не используется, можно их удалить
- */
-const cardTemplate = document.querySelector('#place-template').content.querySelector('.place-card');
+
 const placesList = document.querySelector('.places-list');
 const popupOpenButton = document.querySelector('.button');
-const popupAdd = document.querySelector('.popup_add');
-const popupEdit = document.querySelector('.popup_edit');
 const popupCloseAddButton = document.querySelector('.popup__close-add');
 const popupCloseImgButton = document.querySelector('.popup__close-img');
 const popupCloseEditButton = document.querySelector('.popup__close-edit');
 const nameInput = document.querySelector('.popup__input_type_name');
 const linkInput = document.querySelector('.popup__input_type_link-url');
-const newCardForm = document.querySelector('.popup__form');
 const buttonEdit = document.querySelector('.button-edit');
 const name = document.querySelector('.user-info__name');
 const job = document.querySelector('.user-info__job');
@@ -23,7 +16,6 @@ const jobInput = document.querySelector('input[name="job"]');
 const formEdit = document.forms.editForm;
 const formAdd = document.forms.addForm;
 const popupImage = document.querySelector('.popup__image');
-const popupImg = document.querySelector('.popup_img');
 const errorMessages = {
   empty: 'Это обязательное поле',
   wrongLength: 'Должно быть от 2 до 30 символов',
@@ -96,15 +88,3 @@ popupCloseImgButton.addEventListener('click', () => {
   imgPopup.close();
 });
 })();
-
-/** REVIEW: 
- * 
- * В целом по работе: 
- * 
- * Все критические ошибки были исправлены и также были приняты к сведению комментарии из "можно лучше", отличная работа! 
- * Спасибо за усилия и старания, удачи в следующем спринте и успехов в дальнейшем обучении
- * 
- * Можно лучше: 1) Вынести реализацию открытия попапа с большим изображением из класса Card
- * 2) Перменные cardTemplate, popupAdd, popupEdit, newCardForm и popupImg объявлены, но не используется (script.js)
- * 3) Реализовать закрытие попапа по клику на Escape (keycode = 27)
- */
